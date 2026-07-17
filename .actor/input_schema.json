@@ -1,0 +1,40 @@
+{
+  "title": "Jobstreet Scraper Input Config",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "keyword": {
+      "title": "Search Keyword",
+      "type": "string",
+      "description": "Job title or skill keyword to search (e.g. 'python')",
+      "default": "python",
+      "editor": "textfield"
+    },
+    "siteKey": {
+      "title": "Market (Country)",
+      "type": "string",
+      "description": "Choose the country site (e.g. MY-Main, SG-Main, PH-Main, ID-Main, TH-Main, HK-Main)",
+      "default": "SG-Main",
+      "prefill": "SG-Main",
+      "editor": "select",
+      "enum": ["MY-Main", "SG-Main", "PH-Main", "ID-Main", "TH-Main", "HK-Main"],
+      "enumTitles": ["Malaysia", "Singapore", "Philippines", "Indonesia", "Thailand", "Hong Kong"]
+    },
+    "where": {
+      "title": "Location Filter",
+      "type": "string",
+      "description": "Location to search (e.g. 'Kuala Lumpur', 'Singapore'). Leave blank for nationwide.",
+      "default": "",
+      "editor": "textfield"
+    },
+    "maxItems": {
+      "title": "Max Items",
+      "type": "integer",
+      "description": "Maximum number of jobs to scrap.",
+      "default": 50,
+      "minimum": 1,
+      "editor": "number"
+    }
+  },
+  "required": ["keyword"]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "jobstreet-jobs-scraper",
+  "version": "1.0.0",
+  "description": "Fast HTTP-only JobStreet & JobsDB Scraper Actor using public Seek APIs.",
+  "main": "src/main.js",
+  "type": "module",
+  "dependencies": {
+    "apify": "^3.1.0",
+    "got": "^12.6.1"
+  },
+  "scripts": {
+    "start": "node src/main.js"
+  }
+}

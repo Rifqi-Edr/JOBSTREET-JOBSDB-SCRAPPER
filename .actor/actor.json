@@ -1,0 +1,9 @@
+{
+  "actorSpecification": 1,
+  "name": "jobstreet-jobs-scraper",
+  "title": "Jobstreet & JobsDB Jobs Scraper",
+  "version": "0.1.0",
+  "dockerfile": "./Dockerfile",
+  "readme": "./README.md",
+  "input": "./.actor/input_schema.json"
+}
