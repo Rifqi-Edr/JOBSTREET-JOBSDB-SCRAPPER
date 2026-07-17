@@ -1,0 +1,5 @@
+# gitignore for Apify Actor
+node_modules/
+storage/
+apify_testing_input.json
+.apify/
