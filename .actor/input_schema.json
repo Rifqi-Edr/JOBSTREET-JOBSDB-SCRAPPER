@@ -6,35 +6,55 @@
     "keyword": {
       "title": "Search Keyword",
       "type": "string",
-      "description": "Job title or skill keyword to search (e.g. 'python')",
-      "default": "python",
+      "description": "Job title or keyword to search",
+      "prefill": "python",
       "editor": "textfield"
     },
     "siteKey": {
-      "title": "Market (Country)",
+      "title": "Regional Site Key",
       "type": "string",
-      "description": "Choose the country site (e.g. MY-Main, SG-Main, PH-Main, ID-Main, TH-Main, HK-Main)",
-      "default": "SG-Main",
+      "description": "Site key targeting a regional job board",
       "prefill": "SG-Main",
       "editor": "select",
-      "enum": ["MY-Main", "SG-Main", "PH-Main", "ID-Main", "TH-Main", "HK-Main"],
-      "enumTitles": ["Malaysia", "Singapore", "Philippines", "Indonesia", "Thailand", "Hong Kong"]
+      "enum": [
+        "MY-Main",
+        "SG-Main",
+        "PH-Main",
+        "ID-Main",
+        "TH-Main",
+        "HK-Main",
+        "AU-Main",
+        "NZ-Main"
+      ],
+      "enumTitles": [
+        "Malaysia (MY-Main)",
+        "Singapore (SG-Main)",
+        "Philippines (PH-Main)",
+        "Indonesia (ID-Main)",
+        "Thailand (TH-Main)",
+        "Hong Kong (HK-Main)",
+        "Australia (AU-Main)",
+        "New Zealand (NZ-Main)"
+      ]
     },
     "where": {
       "title": "Location Filter",
       "type": "string",
-      "description": "Location to search (e.g. 'Kuala Lumpur', 'Singapore'). Leave blank for nationwide.",
-      "default": "",
+      "description": "Specific location or region (optional)",
+      "prefill": "",
       "editor": "textfield"
     },
     "maxItems": {
       "title": "Max Items",
       "type": "integer",
-      "description": "Maximum number of jobs to scrap.",
-      "default": 50,
+      "description": "Max job postings to scrape",
+      "prefill": 50,
       "minimum": 1,
       "editor": "number"
     }
   },
-  "required": ["keyword"]
+  "required": [
+    "keyword",
+    "siteKey"
+  ]
 }
