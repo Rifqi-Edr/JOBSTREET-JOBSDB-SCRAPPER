@@ -65,9 +65,9 @@ while (itemsCount < maxItems) {
             const jobId = job.id;
             const jobUrl = `${baseUrl}/job/${jobId}`;
 
-            // Parse work types and arrangements safely
+                        // Parse work types and arrangements safely
             const workType = job.workTypes && job.workTypes.length > 0 ? job.workTypes[0] : '';
-            const workArrangement = job.workArrangements && job.workArrangements.label ? job.workArrangements.label : '';
+            const workArrangement = job.workArrangements?.displayText || (job.workArrangements?.data?.[0]?.label?.text) || '';
 
             // Locations
             const locations = (job.locations || []).map(loc => loc.label).join(', ');
