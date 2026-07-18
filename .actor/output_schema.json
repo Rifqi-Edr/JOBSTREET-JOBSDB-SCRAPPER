@@ -1,82 +1,12 @@
 {
-  "title": "Jobstreet Scraper Output Config",
+  "actorOutputSchemaVersion": 1,
+  "title": "Jobstreet Scraper Output Schema",
   "type": "object",
-  "schemaVersion": 1,
   "properties": {
-    "id": {
-      "title": "Job ID",
+    "dataset": {
       "type": "string",
-      "description": "Unique job posting identifier",
-      "editor": "textfield"
-    },
-    "title": {
-      "title": "Job Title",
-      "type": "string",
-      "description": "Job title",
-      "editor": "textfield"
-    },
-    "company": {
-      "title": "Company Name",
-      "type": "string",
-      "description": "Hiring company name",
-      "editor": "textfield"
-    },
-    "location": {
-      "title": "Location",
-      "type": "string",
-      "description": "Job location",
-      "editor": "textfield"
-    },
-    "jobUrl": {
-      "title": "Job URL",
-      "type": "string",
-      "description": "Direct URL to the job posting",
-      "editor": "textfield"
-    },
-    "postedDate": {
-      "title": "Posted Date",
-      "type": "string",
-      "description": "ISO date format when the job was posted",
-      "editor": "textfield"
-    },
-    "postedDateDisplay": {
-      "title": "Relative Posted Date",
-      "type": "string",
-      "description": "Human readable relative date format (e.g. '8h ago')",
-      "editor": "textfield"
-    },
-    "salary": {
-      "title": "Salary",
-      "type": "string",
-      "description": "Salary ranges or compensation description if available",
-      "editor": "textfield"
-    },
-    "workType": {
-      "title": "Employment Type",
-      "type": "string",
-      "description": "Employment type (e.g. Full time, Part time)",
-      "editor": "textfield"
-    },
-    "workArrangement": {
-      "title": "Work Arrangement",
-      "type": "string",
-      "description": "Remote, hybrid, or office arrangement description",
-      "editor": "textfield"
-    },
-    "teaser": {
-      "title": "Teaser Description",
-      "type": "string",
-      "description": "Teaser description of the role",
-      "editor": "textfield"
-    },
-    "bulletPoints": {
-      "title": "Job Highlights",
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Highlights extracted from the posting",
-      "editor": "json"
+      "title": "Dataset Results",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
     }
   }
 }

@@ -1,0 +1,40 @@
+{
+  "actorSpecification": 1,
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": ["title", "company", "location", "salary", "workType", "workArrangement"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "title": {
+            "format": "text",
+            "label": "Job Title"
+          },
+          "company": {
+            "format": "text",
+            "label": "Company Name"
+          },
+          "location": {
+            "format": "text",
+            "label": "Location"
+          },
+          "salary": {
+            "format": "text",
+            "label": "Salary"
+          },
+          "workType": {
+            "format": "text",
+            "label": "Employment Type"
+          },
+          "workArrangement": {
+            "format": "text",
+            "label": "Work Arrangement"
+          }
+        }
+      }
+    }
+  }
+}
