@@ -33,34 +33,6 @@ The scraper supports the following regional job boards:
 
 ---
 
-## ⚡ Quick Start
-
-### Running on Apify Platform
-
-1. **Deploy the Actor** to your Apify account
-2. **Configure Input** with your search parameters
-3. **Run** and retrieve results from the dataset
-
-### Running Locally
-
-```bash
-# Clone or navigate to the actor directory
-cd C:\Code\apify
-
-# Install dependencies
-npm install
-
-# Configure your input
-# Edit storage/key_value_stores/default/INPUT.json
-
-# Run the scraper
-apify run
-
-# View results in storage/datasets/default/
-```
-
----
-
 ## 📋 Input Configuration
 
 The scraper accepts the following input parameters via JSON configuration:
@@ -163,81 +135,6 @@ The scraper outputs structured JSON data with the following fields for each job:
 | `bulletPoints` | Array | Key highlights or selling points of the role |
 
 ---
-
-## 🛠 Local Development
-
-### Prerequisites
-
-- Node.js v16+ installed
-- Apify CLI installed globally: `npm install -g apify-cli`
-- Git (optional, for version control)
-
-### Setup
-
-```bash
-# Navigate to the project directory
-cd C:\Code\apify
-
-# Install dependencies
-npm install
-
-# Validate actor configuration
-apify validate-schema .actor/input_schema.json
-```
-
-### Configuring Local Input
-
-Edit the input file at `storage/key_value_stores/default/INPUT.json`:
-
-```json
-{
-  "keyword": "react developer",
-  "siteKey": "SG-Main",
-  "where": "Singapore",
-  "maxItems": 20
-}
-```
-
-### Running Locally
-
-```bash
-# Run with existing storage (append to previous results)
-apify run
-
-# Run with fresh storage (clears previous results)
-apify run --purge
-```
-
-### Viewing Results
-
-Results are stored in `storage/datasets/default/` as individual JSON files:
-- `000000001.json`
-- `000000002.json`
-- `000000003.json`
-- etc.
-
----
-
-## 🚢 Deployment to Apify
-
-### First-Time Deployment
-
-```bash
-# Log in to your Apify account
-apify login
-
-# Push the actor to Apify platform
-apify push
-```
-
-### Updating an Existing Actor
-
-```bash
-# Make your changes to src/main.js or configuration
-
-# Push updates
-apify push
-```
 
 ### Running on Apify Platform
 
